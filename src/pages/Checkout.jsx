@@ -24,8 +24,8 @@ export default function Checkout({cart, clearCart}){
             <h4>Order Summary</h4>
             <div>Items: {cart.length}</div>
             <div>Total: ₹{total}</div>
-            {offer==='FIRST10' && <div style={{color:'#059669'}}>Offer applied: 10% off → ₹{discounted}</div>}
-            <div style={{marginTop:8}} className="offer-box">🎉 Offer: Use code <strong>FIRST10</strong> to get 10% off</div>
+            {offer==='ABHI20' && <div style={{color:'#059669'}}>Offer applied: 20% off → ₹{discounted}</div>}
+            <div style={{marginTop:8}} className="offer-box">🎉 Offer: Use code <strong>ABHI20</strong> to get 20% off</div>
           </div>
         </div>
       </div>

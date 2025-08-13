@@ -1,11 +1,16 @@
-* { box-sizing: border-box }
+* { box-sizing: border-box; }
+
 body {
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
   margin: 0;
   background: #f3f4f6;
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.container { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 16px; 
+}
 
 .header {
   display: flex;
@@ -14,8 +19,8 @@ body {
   padding: 12px 0;
 }
 
-.logo { display: flex; align-items: center; gap: 8px }
-.logo img { height: 40px }
+.logo { display: flex; align-items: center; gap: 8px; }
+.logo img { height: 40px; }
 
 .search { flex: 1; }
 .search input {
@@ -25,39 +30,49 @@ body {
   border: 1px solid #e5e7eb;
 }
 
-/* CATEGORY SECTION WITH BACKGROUND IMAGE */
+/* CATEGORY SECTION WITH BACKGROUND IMAGE & BLUE GRADIENT */
 .categories-wrapper {
-  background-size: cover;
-  padding: 20px;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(173, 216, 230, 0.3)),
+              url('/images/categories-bg.jpg') center/cover no-repeat;
+  padding: 25px;
   border-radius: 40px;
   margin: 20px 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .categories {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   padding: 12px 0;
-  overflow: auto;
+  overflow-x: auto;
   justify-content: center;
 }
 
+/* ROUND BUBBLES */
 .cat {
-  min-width: 90px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 14px 12px;
+  min-width: 100px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 16px 12px;
   border-radius: 50%;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 74, 173, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 74, 173, 0.15);
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid #cce0ff;
+  border: 2px solid #b3d4ff;
+}
+
+.cat img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 6px;
 }
 
 .cat:hover {
-  background: rgba(230, 240, 255, 0.95);
-  box-shadow: 0 6px 14px rgba(0, 74, 173, 0.25);
-  transform: translateY(-3px);
+  background: rgba(225, 240, 255, 0.95);
+  box-shadow: 0 6px 16px rgba(0, 74, 173, 0.25);
+  transform: translateY(-5px) scale(1.05);
 }
 
 .banner {
@@ -87,8 +102,8 @@ body {
   flex-direction: column;
 }
 
-.card img { height: 140px; object-fit: cover; border-radius: 8px }
-.card .title { font-weight: 600; margin-top: 8px }
+.card img { height: 140px; object-fit: cover; border-radius: 8px; }
+.card .title { font-weight: 600; margin-top: 8px; }
 .card .meta {
   display: flex;
   justify-content: space-between;
@@ -150,5 +165,5 @@ body {
 }
 
 @media (max-width:640px) {
-  .grid { grid-template-columns: repeat(2,1fr) }
+  .grid { grid-template-columns: repeat(2,1fr); }
 }
