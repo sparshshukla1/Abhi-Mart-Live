@@ -6,7 +6,7 @@ export default function Checkout({cart, clearCart}){
   const [offer, setOffer] = useState('')
   const navigate = useNavigate()
   const total = cart.reduce((s,i)=> s + i.price * i.qty, 0)
-  const discounted = offer === 'FIRST10' ? Math.round(total * 0.9) : total
+  const discounted = offer === 'ABHI10' ? Math.round(total * 0.9) : total
   function placeOrder(e){ e.preventDefault(); clearCart && clearCart(); navigate('/order-success') }
   return (
     <div>
@@ -24,8 +24,8 @@ export default function Checkout({cart, clearCart}){
             <h4>Order Summary</h4>
             <div>Items: {cart.length}</div>
             <div>Total: ₹{total}</div>
-            {offer==='ABHI20' && <div style={{color:'#059669'}}>Offer applied: 20% off → ₹{discounted}</div>}
-            <div style={{marginTop:8}} className="offer-box">🎉 Offer: Use code <strong>ABHI20</strong> to get 20% off</div>
+            {offer==='ABHI10' && <div style={{color:'#059669'}}>Offer applied: 10% off → ₹{discounted}</div>}
+            <div style={{marginTop:8}} className="offer-box">🎉 Offer: Use code <strong>ABHI10</strong> to get 20% off</div>
           </div>
         </div>
       </div>
